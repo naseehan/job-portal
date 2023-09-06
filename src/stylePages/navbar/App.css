@@ -1,0 +1,190 @@
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+.mobile_menu {
+  left: -100%;
+}
+.mob-nav {
+  left: 0;
+}
+                                /* logout button */
+.Btn {
+  --black: #000000;
+  --ch-black: #141414;
+  --eer-black: #1b1b1b;
+  --night-rider: #2e2e2e;
+  --white: #ffffff;
+  --af-white: #f3f3f3;
+  --ch-white: #e1e1e1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: var(--af-white);
+}
+
+/* plus sign */
+.sign {
+  width: 100%;
+  transition-duration: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: var(--night-rider);
+}
+/* text */
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: var(--night-rider);
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: 0.3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 125px;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: 0.3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: 0.3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px, 2px);
+}
+
+
+
+                /* ----------user active window------------ */
+.user-info{
+    display: none;
+ }
+ .active-user{
+     height: fit-content;
+     display: grid !important;
+     gap: 1rem;
+     background-color: #fff;
+     width: fit-content;
+     left: 84%;
+     position: fixed;
+     padding: 2rem;
+     border-radius: 4px;
+     border: none;
+     top: 16%;
+     box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15) !important;
+     z-index: 999999999999;
+ }
+ .active-user a{
+    color: #000000;
+ }
+ .user-overlay{
+    opacity: 0;
+    display: none;
+    position: fixed;
+    background-color: rgba(0,0,0,.3) !important;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999999999;
+}
+.justify{
+  justify-content: space-between;
+}
+@media only screen and (max-width: 786px) {
+  .hamburger {
+    display: block;
+  }
+  .logo{
+    width: 100%;
+  }
+  .mobile-menu {
+    display: grid;
+  }
+  .main-menu {
+    background-color: #fff;
+  }
+  .mobile_menu {
+    height: 286%;
+  }
+  .mobile_menu ul {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+  .f-right {
+    float: initial;
+  }
+  .header-btn .head-btn1 {
+    margin-right: 0px;
+  }
+  .header-btn {
+    background-color: #fff;
+  }
+  .d-none {
+    display: grid !important;
+  }
+  .mobile_menu .fa-x {
+    right: -338px;
+    position: relative;
+    top: 38px;
+  }
+  .header-area .menu-wrapper {
+    display: none;
+  }
+  .user-image{
+    display: none;
+  }
+  .mobile-user{
+    display: flex;
+    background-color: #fff;
+    height: 9rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .active-user {
+    left: 30%;
+    top: 75%;
+} 
+.pc-header-btn{
+    display: none !important;
+  }
+}

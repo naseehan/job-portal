@@ -1,0 +1,107 @@
+.login-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13rem;
+}
+.login-form{
+    width: 30rem;
+    gap: 2rem;
+    display: grid;
+    text-align: center;
+}
+.login-form h3, .register-form h3{
+    font-weight: 700;
+    font-size: 30px;
+}
+.login-form form{
+    gap: 1rem;
+    display: grid;
+    width: 100%;
+    text-align: left;
+}
+.login-form label{
+    font-weight: 500;
+    font-size: .938rem;
+}
+.login-form input{
+    background: #fff;
+    border: 1px solid rgba(0,167,172,.12);
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .35s;
+}
+.login-form input:hover{
+    border-color: rgba(0,167,172,.4);
+}
+.login-form form button{
+    font-size: 1.063rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #00a7ac;
+    position: relative;
+    transition: .5s all ease;
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+}
+/* .login-form form button:hover{
+    background-color: #000;
+} */
+.login-form form button::before{
+    transition: .5s all ease;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #061421;
+    z-index: -1;
+}
+.login-form form button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  .to-signup{
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+  }
+  .to-signup p{
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.063rem;
+    color: #000;
+  }
+  .to-signup a{
+    color: #00a7ac;
+    cursor: pointer;
+  }
+  /* for error message */
+.error-message{
+    background-color: #d30f0f;
+    color: #fff !important;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-align: center;
+}
+  @media only screen and (max-width: 786px){
+    .login-section{
+        padding: 5rem 2rem;
+    }
+    .login-form{
+        width: auto;
+    }
+  }

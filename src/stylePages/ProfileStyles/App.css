@@ -1,0 +1,359 @@
+.profile-section{
+    padding: 10rem;
+}
+.user-profile{
+    display: flex;
+    gap: 2rem;
+}
+.dashboard-menu ul{
+    display: grid;
+    gap: 1rem;
+}
+.dashboard-menu ul li{
+    list-style: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+.dashboard-menu ul li:hover{
+    background-color: rgba(0,167,172,.08);
+    color: #000;
+}
+.dashboard-menu ul .active-window{
+    background-color: #00a7ac;
+    color: #fff;
+}
+
+/* My profile component */
+.main-profile{
+    display: grid;
+    gap: 3rem;
+    width: 51rem;
+}
+.main-profile h5{
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+.profile-form form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+.profile-form form button{
+    font-size: 1.063rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #00a7ac;
+    position: relative;
+    transition: .5s all ease;
+    z-index: 1;
+    cursor: pointer;
+    border: none;
+    height: 50px;
+    align-self: center;
+}
+.profile-form form button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+.profile-form form button::before {
+    transition: .5s all ease;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #061421;
+    z-index: -1;
+}
+.profile-form form div{
+    display: grid;
+}
+.edit-resume form button{
+    font-size: 1.063rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #00a7ac;
+    position: relative;
+    transition: .5s all ease;
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+}
+.edit-resume form button::before{
+    transition: .5s all ease;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #061421;
+    z-index: -1;
+}
+.edit-resume form button:hover::before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+@media only screen and (max-width: 786px) {
+    .profile-section{
+        padding: 1rem;
+    }
+    .user-profile{
+        display: grid;
+        gap: 4rem;
+    }
+    .dashboard-menu ul{
+        text-align: center;
+    }
+    .main-profile{
+        width: auto;
+    }
+    .profile-form form{
+        grid-template-columns: 1fr;
+    }
+    .dashboard-menu ul li{
+        padding: 1rem 1rem;
+    }
+}
+
+/* Applied jobs component */
+.applied-jobs{
+    width: 51rem;
+}
+.table-date{
+    display: grid;
+    gap: 3rem;
+}
+.table-date table{
+    width: 100%;
+}
+.table-date thead{
+    height: 63px;
+    background: #00a7ac;
+    border-radius: 4px;
+    border: 1px solid #00a7ac;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+}
+.table-date thead tr th{
+    padding: 1rem;
+}
+.table-date tbody td{
+    padding: 1rem;
+}
+table .company-details .top{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+table .company-details .top h6{
+    margin: 0;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #000;
+}
+table .company-details .top p{
+    margin: 0;
+    font-weight: 400;
+    font-size: .938rem;
+    color: #595959;
+}
+table .company-details .bottom{
+    display: flex;
+    gap: 1rem;
+}
+table tbody tr .company-name p{
+    color: #00a7ac;
+    cursor: pointer;
+}
+table tbody tr .status-button button{
+    font-size: 1.063rem;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #00a7ac;
+    position: relative;
+    transition: .5s all ease;
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: none;
+}
+table tbody tr .status-button button::before{
+    transition: .5s all ease;
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #061421;
+    z-index: -1;
+}
+table tbody tr .status-button button:hover:before{
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+@media only screen and (max-width: 786px) {
+    .applied-jobs{
+        width: auto;
+    }
+    table tbody tr{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .table-date thead{
+        display: none;
+    }
+}
+/* Edit resume section */
+.edit-resume{
+    width: 51rem;
+}
+.edit-resume form{
+    display: grid;
+    gap: 2rem;
+}
+.edit-form, .profile-edit, .education{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.edit-form > div:nth-child(2){
+    align-self: center;
+}
+.edit-form > div:last-child, .profile-edit >div:last-child {
+    grid-column: 1 / span 2; 
+}
+
+@media only screen and (max-width: 786px) {
+    .edit-resume{
+        width: auto;
+    }
+    .edit-form, .profile-edit, .education{
+        grid-template-columns: 1fr;
+    }
+    .edit-form > div:last-child, .profile-edit >div:last-child{
+        grid-column: initial;
+    }
+}
+
+
+/* View resume section */
+.view-resume{
+    width: 51rem;
+}
+.resume-full{
+    display: grid;
+    gap: 5rem;
+}
+.personal-info{
+    display: flex;
+    gap: 14rem;
+}
+.personal-info img{
+    width: 135px;
+    height: 140px;
+    border-radius: 5px;
+}
+.personal-info  > div:first-child{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.personal-info > div:first-child div{
+    padding: 35px 20px;
+}
+.personal-info > div:last-child{
+    text-align: right;
+}
+.personal-info > div:last-child h1{
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+    /* personal information */
+.personal{
+    display: grid;
+    gap: 1rem;
+}
+.personal-information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.personal-information label{
+    color: #061421;
+    font-weight: 700;
+}
+.personal-information span{
+    font-weight: 500;
+    font-size: 15px;
+    color: #424242;
+}
+
+
+     /* educational qualification */
+.qualification{
+    display: grid;
+    gap: 3rem;
+}
+.each-edu{
+    display: flex;
+    gap: 10rem;
+}
+.each-edu label{
+    color: #061421;
+    font-weight: 700;
+}
+.edu-info ul p{
+    display: inline;
+    color: #000;
+    font-family: "Exo 2", sans-serif;
+}
+.edu-info ul span{
+    font-weight: 500;
+    font-size: 15px;
+    color: #595959;
+}
+@media only screen and (max-width: 786px){
+    .view-resume {
+        width: auto;
+    }
+    .personal-info {
+        gap: 0rem;
+        display: grid;
+        justify-items: center;
+    }
+    .personal-info > div:first-child {
+        display: grid;
+        justify-items: center;
+    }
+    .personal-info > div:last-child {
+        text-align: center;
+    }
+    .personal-information {
+        grid-template-columns: 1fr;
+    }
+    .each-edu {
+        display: grid;
+        gap: 1rem;
+    }
+}

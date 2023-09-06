@@ -1,0 +1,82 @@
+.register-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13rem;
+    flex-direction: column;
+    gap: 3rem;
+}
+.register-form{
+    display: grid;
+    gap: 2rem;
+    justify-items: center;
+}
+.register-type{
+    display: flex;
+    gap: 5rem;
+}
+.register-section .register-type .candidate-button, .company-button{
+    border: 1px solid rgba(0,167,172,.2);
+    border-radius: 50px;
+    padding: 3px 43px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #000;
+}
+.register-section .register-type .candidate-button, .company-button:hover{
+    cursor: pointer;
+}
+.register-section .register-type .active{
+    border: 1px solid rgba(0,167,172,.2);
+    border-radius: 50px;
+    padding: 3px 43px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    background-color: #00a7ac;
+    color: #fff;
+}
+.company-form form select{
+    background: #fff;
+    border: 1px solid rgba(0,167,172,.12);
+    border-radius: 5px;
+    height: 50px;
+    padding-left: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: .35s;
+}
+.hidden-candidate{
+    display: none;
+}
+.hidden-company{
+    display: none;
+}
+/* for message after registering user */
+.success{
+    display: none;
+}
+.success-true{
+    display: block;
+    background-color: rgb(30, 177, 30);
+    padding: 10px 20px;
+    color: #000;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.name-exist{
+    background-color: rgb(231, 45, 45);
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+@media only screen and (max-width: 786px) {
+    .register-type{
+        gap: 1rem;
+    }
+    .register-section{
+        padding: 1rem;
+    }
+}
